@@ -1,6 +1,17 @@
 /* Pseudo state for invalid form fields */
 /* formatting for each p */
+body, header, form{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
 
+form {
+  width: 50%;
+}
+
+input {
+/* I'd like the input fields to be at the far end of the textbox */
+}
 input:invalid {
   border:3px red solid;
 }

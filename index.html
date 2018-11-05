@@ -6,17 +6,47 @@
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
+  
 </head>
 <body>
   <form>
     <!-- Email -->
-    <p></p>
+    <p>
+      <label for="email">What is your email?</label>
+      <input id="email" type="email" required>
+    </p>
     <!-- Email Confirmation -->
+    <p>
+      <label>Please confirm your email.</label>
+      <input id="emailConfirm" required>
+    </p>
     <!-- Country -->
+    <p>
+      <label>Country</label>
+      <input id="country" required>
+    </p>
     <!-- Zip Code -->
+    <p>
+      <label>Zipcode</label>
+      <input id="zipCode" required>
+    </p>
     <!-- Password -->
+    <p>
+      <label><p>Please set a Password</p>
+        <p>Requirement: At least 6 characters</p>
+        <p>Requirement: At least 1 number</p>
+      </label>
+      <input id="pw" required>
+    </p>
     <!-- Password COnfirmation -->
+    <p>
+      <label>Please confirm your password</label>
+      <input id="pwConfirm" required>
+    </p>
+    <!-- Submit button SHOULD THROW ERROR FOR ANY INVALID FIELDS -->
+    <button id="submit">SUBMIT</button>
   </form>
+  <h1>This is the end of the form.</h1>
+  <script src="main.js"></script>
 </body>
 </html>
