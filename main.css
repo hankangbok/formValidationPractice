@@ -1,0 +1,15 @@
+/* Pseudo state for invalid form fields */
+/* formatting for each p */
+
+input:invalid {
+  border:3px red solid;
+}
+
+input:valid {
+  background-color:rgba(5, 141, 5, 0.5);
+}
+
+p {
+  border: 2px gray solid;
+}
+/* All inputs */
