@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
@@ -12,36 +12,46 @@
   <form>
     <!-- Email -->
     <p>
+      <h2>Email</h2>
       <label for="email">What is your email?</label>
       <input id="email" type="email" required>
-    </p>
-    <!-- Email Confirmation -->
-    <p>
+      <br>
       <label>Please confirm your email.</label>
-      <input id="emailConfirm" required>
+      <input id="emailConfirm" onblur="validateConfirmisEqual(email,emailConfirm)" required>
     </p>
     <!-- Country -->
     <p>
-      <label>Country</label>
-      <input id="country" required>
+      <label><h2>Country</h2></label>
+      <select id="country" type="text" list="countrylist" required>
+        <datalist id="countrylist">
+          <option>South Korea</option>
+          <option>USA</option>
+          <option>Canada</option>
+          <option>China</option>
+          <option>Japan</option>
+        </datalist>
+    </select>
     </p>
     <!-- Zip Code -->
     <p>
-      <label>Zipcode</label>
-      <input id="zipCode" required>
+      <label for="zipCode"><h2>Zipcode</h2>
+        <p>Please enter a 5 digit zip code (e.g. 12345)</p> 
+        <p>OR 5 digits followed by a dash and 4 digit extension (e.g. 12345-6789</p>        
+      </label>
+      <input id="zipCode" minlength="5" maxlength="10" onblur="validateZip(zipCode)" required>
     </p>
     <!-- Password -->
     <p>
-      <label><p>Please set a Password</p>
+      <label><h2>Please Set a Password</h2>
         <p>Requirement: At least 6 characters</p>
         <p>Requirement: At least 1 number</p>
       </label>
-      <input id="pw" required>
+      <input id="pw" type="password" onblur="validatePW(pw)" required>
     </p>
     <!-- Password COnfirmation -->
     <p>
       <label>Please confirm your password</label>
-      <input id="pwConfirm" required>
+      <input id="pwConfirm" type="password" minlength="6" onblur="validateConfirmisEqual(pw,pwConfirm)" required>
     </p>
     <!-- Submit button SHOULD THROW ERROR FOR ANY INVALID FIELDS -->
     <button id="submit">SUBMIT</button>

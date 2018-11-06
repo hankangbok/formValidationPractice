@@ -5,6 +5,9 @@ body, header, form{
   font-size: 1em;
 }
 
+body {
+  justify-content: center;
+}
 form {
   width: 50%;
 }
