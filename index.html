@@ -9,7 +9,10 @@
   
 </head>
 <body>
-  <form>
+  <div id = "container">
+  <h1>Fake Form</h1>
+  <h2>This form does NOT actually submit data</h2>
+    <form>
     <!-- Email -->
     <p>
       <h2>Email</h2>
@@ -24,6 +27,7 @@
       <label><h2>Country</h2></label>
       <select id="country" type="text" list="countrylist" required>
         <datalist id="countrylist">
+          <option disabled selected value> select your country of residence</option>
           <option>South Korea</option>
           <option>USA</option>
           <option>Canada</option>
@@ -45,6 +49,8 @@
       <label><h2>Please Set a Password</h2>
         <p>Requirement: At least 6 characters</p>
         <p>Requirement: At least 1 number</p>
+        <p>Requirement: At least 1 non-alphanumeric symbol</p>
+        <p>Requirement: At least 1 CAPITALIZED letter</p>
       </label>
       <input id="pw" type="password" onblur="validatePW(pw)" required>
     </p>
@@ -54,9 +60,10 @@
       <input id="pwConfirm" type="password" minlength="6" onblur="validateConfirmisEqual(pw,pwConfirm)" required>
     </p>
     <!-- Submit button SHOULD THROW ERROR FOR ANY INVALID FIELDS -->
-    <button id="submit">SUBMIT</button>
+    <button id="submit" type="submit">SUBMIT</button>  
   </form>
-  <h1>This is the end of the form.</h1>
-  <script src="main.js"></script>
+  
+</div>
+<script src="main.js"></script>
 </body>
 </html>

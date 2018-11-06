@@ -5,11 +5,13 @@ body, header, form{
   font-size: 1em;
 }
 
-body {
-  justify-content: center;
+#container {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
 }
 form {
-  width: 50%;
+  width: 60%;
 }
 
 input {
@@ -20,7 +22,7 @@ input:invalid {
 }
 
 input:valid {
-  background-color:rgba(5, 141, 5, 0.5);
+  /* background-color:rgba(5, 141, 5, 0.5); */
 }
 
 p {
