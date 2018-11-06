@@ -64,6 +64,12 @@ function validatePW(pwObject) {
 }
 
 document.querySelector('#submit').addEventListener("click",function(e){
-  alert("that worked! High 5")
+  if (form.checkValidity()==true) {
+    alert("that worked! High 5");
+  }
+  else {
+    alert("There are invalid fields. Please look for boxes outlined in red and\
+    correct any errors");
+  }
   e.preventDefault();
 });
